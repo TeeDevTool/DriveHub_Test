@@ -1,0 +1,126 @@
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+  width: 100%;
+  margin: auto;
+  padding: 16px;
+  max-width: 530px;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+.modalContent .close {
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.modalContent .modalHeader,
+.modalCarListAmount,
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalContent .modalTitle {
+  font-size: clamp(1.5rem, 1.4013rem + 0.4934vw, 1.875rem);
+  line-height: 0;
+}
+
+.modalCarList {
+  border-bottom: 1px solid #d1d5db;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalCarListTitle,
+.summaryTitle,
+.summaryPrice {
+  margin: 0;
+  font-size: clamp(1rem, 0.8684rem + 0.6579vw, 1.5rem);
+}
+
+.modalCarListPrice {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 0;
+}
+
+.modalCarListHeader {
+  display: flex;
+  gap: 8px;
+}
+
+.modalCarListAmount {
+  gap: 8px;
+}
+
+.modalCarListWrapper {
+  min-height: 270px;
+}
+
+.amountBtn {
+  box-sizing: border-box;
+  padding: 7px;
+  color: var(--white);
+  background-color: var(--button-bg__default);
+  border-radius: 8px;
+  cursor: pointer;
+  height: 38px;
+  transition: all 0.2s ease-out;
+}
+
+.amountBtn:hover,
+.amountBtn.disabled {
+  background-color: var(--button-bg__disabled);
+}
+
+.amountBtn.disabled {
+  pointer-events: none;
+}
+
+.modalCartDiscount {
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.modalCartDiscount input {
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 43px;
+  font-size: 16px;
+  border: solid var(--text__disabled) 1px;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.summary {
+  padding: 10px 0;
+}
+
+.summary:nth-of-type(2) {
+  border: #d1d5db solid 1px;
+  border-left: 0;
+  border-right: 0;
+}
+
+.summaryPrice {
+  font-weight: 400;
+}

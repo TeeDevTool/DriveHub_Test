@@ -1,0 +1,82 @@
+.homeContainer {
+  padding: 0;
+  max-width: 100vw;
+}
+
+.homeContainer .homeHeader {
+  padding: clamp(1.25rem, 1.0855rem + 0.8224vw, 1.875rem)
+    clamp(1.0625rem, -0.5164rem + 7.8947vw, 7.0625rem);
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeContainer .homeHeader h1 {
+  font-size: clamp(1.5rem, 1.4013rem + 0.4934vw, 1.875rem);
+  font-weight: 600;
+  letter-spacing: 0em;
+}
+
+.homeContainer .homeHeader .homeListControl {
+  display: flex;
+  gap: 20px;
+}
+
+.homeContainer .homeHeader .input {
+  width: 302px;
+  max-height: 43px;
+  font-size: 16px;
+  border: solid var(--text__disabled) 1px;
+  border-radius: 4px;
+  padding: 12px;
+  appearance: none;
+}
+
+.homeContainer .homeHeader .sort select {
+  width: 206px;
+  padding-left: 40px;
+}
+
+.homeContainer .homeHeader .sort {
+  position: relative;
+}
+
+.sort img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.homeContainer .homeCarList {
+  padding: 32px clamp(1.0625rem, -0.5164rem + 7.8947vw, 7.0625rem);
+  background-color: var(--bg__default);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  row-gap: 32px;
+}
+
+@media (width < 400px) {
+  .homeContainer .homeCarList {
+    justify-content: center;
+    grid-template-columns: auto;
+  }
+
+  .homeContainer .homeHeader {
+    display: block;
+  }
+
+  .homeContainer .homeHeader .homeListControl {
+    display: block;
+  }
+
+  .homeContainer .homeHeader .input,
+  .homeContainer .homeHeader .sort select {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .homeContainer .homeHeader .search {
+    margin-bottom: 20px;
+  }
+}

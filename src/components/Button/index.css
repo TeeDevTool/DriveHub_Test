@@ -1,0 +1,20 @@
+.btn {
+  background-color: var(--button-bg__default);
+  color: var(--white);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+}
+
+.btn.disabled {
+  pointer-events: none;
+  background-color: var(--button-bg__disabled);
+}
+
+.btn:hover {
+  background-color: var(--button-bg__disabled);
+}
